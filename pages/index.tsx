@@ -4,7 +4,7 @@ import Background from '../components/Background'
 import Navbar from '../components/Navigationbar'
 import Footer from '../components/Footer'
 import Preloader from '../components/Preloader'
-import Hero from '../components/Hero'
+import Hero from '../components/HeroSection'
 import About from '../components/About'
 import Contact from '../components/Contact'
 
