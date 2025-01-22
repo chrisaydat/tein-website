@@ -2,11 +2,11 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Background from '../components/Background'
 import Navbar from '../components/Navigationbar'
-import Footer from '../components/Footer'
+import Footer from '../components/FooterSection'
 import Preloader from '../components/Preloader'
 import Hero from '../components/HeroSection'
-import About from '../components/About'
-import Contact from '../components/Contact'
+import About from '../components/AboutSection'
+import Contact from '../components/ContactSection'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)

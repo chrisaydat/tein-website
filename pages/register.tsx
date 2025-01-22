@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navigationbar'
-import Footer from '../components/Footer'
+import Footer from '../components/FooterSection'
 import Background from '../components/Background'
 import RegistrationForm from '../components/RegistrationForm'
 
