@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Background from '../components/Background'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Events from '../components/Events'
+import Events from '../components/EventsSection'
 
 const EventsPage = () => {
   return (
