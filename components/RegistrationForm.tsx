@@ -37,25 +37,20 @@ const RegistrationForm = () => {
     setError(null)
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_FORMBASE_ENDPOINT!, {
+      await fetch('/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          source: 'TEIN-GIMPA Website',
-          submittedAt: new Date().toISOString(),
-        }),
+        body: JSON.stringify(formData),
       })
-
       setSuccess(true)
       setTimeout(() => {
         void router.push('/')
       }, 3000)
-    } catch (err) {
-      console.error('Registration error:', err)
-      setError('Network error. Your registration was received but there might have been a connection issue.')
+    } catch (error) {
+      console.error('Registration error:', error)
+      setError('Registration failed. Please try again.')
     } finally {
       setIsLoading(false)
     }

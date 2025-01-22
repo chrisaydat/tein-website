@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import Background from '../components/Background'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar'
 import Footer from '../components/Footer'
 import Preloader from '../components/Preloader'
-import Hero from '../components/Hero'
-import About from '../components/About'
+import Hero from '../components/hero'
+import About from '../components/about'
 import Contact from '../components/Contact'
 
 export default function Home() {
