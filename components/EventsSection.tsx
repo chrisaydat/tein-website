@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Events = () => {
+const EventsSection = () => {
   return (
     <section id="events" className="py-32">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -38,4 +38,4 @@ const Events = () => {
   )
 }
 
-export default Events 
+export default EventsSection
