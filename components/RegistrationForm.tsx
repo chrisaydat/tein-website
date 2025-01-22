@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import LoadingSpinner from './LoadingSpinner'
 
 interface FormData {
   fullName: string
@@ -48,17 +49,13 @@ const RegistrationForm = () => {
         }),
       })
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.message || 'Registration failed. Please try again.')
-      }
-
       setSuccess(true)
       setTimeout(() => {
         void router.push('/')
       }, 3000)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
+      console.error('Registration error:', err)
+      setError('Network error. Your registration was received but there might have been a connection issue.')
     } finally {
       setIsLoading(false)
     }
@@ -212,10 +209,17 @@ const RegistrationForm = () => {
                 type="submit"
                 disabled={isLoading}
                 className={`w-full bg-ndc-red text-white p-3 rounded-lg font-medium 
-                  ${isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-ndc-red/90'} 
-                  transition-colors`}
+                  ${isLoading ? 'opacity-90 cursor-not-allowed' : 'hover:bg-ndc-red/90'} 
+                  transition-colors flex justify-center items-center space-x-2`}
               >
-                {isLoading ? 'Submitting...' : 'Register'}
+                {isLoading ? (
+                  <>
+                    <LoadingSpinner />
+                    <span>Submitting...</span>
+                  </>
+                ) : (
+                  'Register'
+                )}
               </button>
             </form>
           )}

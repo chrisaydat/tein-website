@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Head from 'next/head'
 import Background from '../components/Background'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -6,7 +7,6 @@ import Preloader from '../components/Preloader'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Contact from '../components/Contact'
-import Head from 'next/head'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
