@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
-import Background from '../components/Background'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Events from '../components/EventsSection'
+import Background from '@/components/Background'
+import Footer from '@/components/Footer'
+import Events from '@/components/EventsSection'
+import Navbar from '@/components/Navbar'
 
 const EventsPage = () => {
   return (
