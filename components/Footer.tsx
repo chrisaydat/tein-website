@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <p>&copy; 2025 Aydat Dot Org. All rights reserved.</p>
           </div>
           
           <div className="flex space-x-6">
@@ -14,9 +14,9 @@ const Footer = () => {
             <a href="#" className="hover:text-accent transition-colors">
               LinkedIn
             </a>
-            <a href="#" className="hover:text-accent transition-colors">
+            {/* <a href="#" className="hover:text-accent transition-colors">
               GitHub
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

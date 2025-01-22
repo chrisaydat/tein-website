@@ -2,16 +2,16 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-between pt-32 pb-20">
+    <section className="relative min-h-screen flex flex-col justify-between pt-28">
       {/* Top Text */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mt-8">
         <h1 className="text-5xl sm:text-7xl lg:text-[180px] font-sans font-bold text-white leading-none">
           TEIN-GIMPA
         </h1>
       </div>
 
       {/* Bottom Content */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pb-20">
         <div className="flex flex-col md:flex-row justify-between items-end space-y-8 md:space-y-0">
           <div className="text-white">
             <h2 className="text-xl sm:text-2xl md:text-4xl font-sans font-bold mb-2">
