@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import LoadingState from './LoadingState'
+import Image from 'next/image'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -48,10 +49,17 @@ const Navbar = () => {
             {/* Logo */}
             <Link 
               href="/" 
-              className="text-ndc-black font-bold text-lg hover:text-ndc-red transition-colors"
+              className="text-ndc-black hover:text-ndc-red transition-colors flex items-center h-10"
               onClick={() => setIsLoading(true)}
             >
-              TEIN-GIMPA
+              <Image
+                src="/images/ndc-logo.png"
+                alt="NDC Logo"
+                width={40}
+                height={40}
+                className="object-contain h-10 w-auto"
+                priority
+              />
             </Link>
             
             {/* Desktop Menu */}
